@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist PRESTO</title>
+
+<style>
+body{
+  font-family:Arial;
+  background:#f5f5f5;
+  margin:0;
+}
+
+.container{
+  max-width:1050px;
+  margin:20px auto;
+  background:#fff;
+  padding:18px 20px 40px;
+  border-radius:14px;
+}
+
+.section{
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:10px;
+  margin:12px 0;
+}
+
+h1{text-align:center;}
+h3{margin:6px 0;}
+label{display:block;margin:4px 0;}
+textarea{width:100%;min-height:80px;}
+
+button{
+  padding:12px 26px;
+  background:#0d6efd;
+  color:white;
+  border:0;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4px 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>CHECKLIST DIARIO DE CALIDAD E INOCUIDAD</h1>
+<p style="text-align:center;">UNIDADES MÓVILES DE TRANSPORTE – PRESTO</p>
+
+<!-- 🔴 EL FORM INICIA AQUÍ -->
+<form id="formChecklist">
+
+<!-- ================= HOJA 1 ================= -->
+
+<div class="section">
+<h3>Responsable de llenado</h3>
+<label>Chofer de la unidad: <input name="chofer" required></label>
+</div>
+
+<div class="section">
+<h3>1. IDENTIFICACIÓN</h3>
+<label>Fecha: <input type="date" name="fecha" required></label>
+<label>Hora: <input type="time" name="hora" required></label>
+<label>Placa de la unidad: <input name="placa" required></label>
+<label>Ruta (Planta / Tienda): <input name="ruta" required></label>
+<label>Firma: <input name="firma"></label>
+</div>
+
+<div class="section">
+<h3>2. REVISIÓN ANTES DE LA CARGA (PLANTA)</h3>
+
+<strong>A. Sistema de Refrigeración y Cadena de Frío</strong>
+<div class="grid">
+<label><input type="checkbox" name="a1"> Sistema operativo y encendido</label>
+<label><input type="checkbox" name="a2"> Termómetro limpio</label>
+<label><input type="checkbox" name="a3"> Sin goteos / óxido / escarcha</label>
+<label><input type="checkbox" name="a4"> Cortinas limpias e íntegras</label>
+</div>
+
+<strong>B. Condiciones del Vehículo (Interior)</strong>
+<div class="grid">
+<label><input type="checkbox" name="b1"> Piso / paredes / techo limpios</label>
+<label><input type="checkbox" name="b2"> Sin olores extraños</label>
+<label><input type="checkbox" name="b3"> Sin cuerpos extraños</label>
+<label><input type="checkbox" name="b4"> Sin plagas o indicios</label>
+</div>
+
+<strong>C. Equipos y Utensilios</strong>
+<div class="grid">
+<label><input type="checkbox" name="c1"> Jabas y contenedores limpios</label>
+<label><input type="checkbox" name="c2"> Carros sin óxido ni roturas</label>
+<label><input type="checkbox" name="c3"> Productos no tocan el piso</label>
+</div>
+</div>
+
+<div class="section">
+<h3>3. CARGA DE PRODUCTOS</h3>
+<div class="grid">
+<label><input type="checkbox" name="d1"> Productos íntegros y rotulados</label>
+<label><input type="checkbox" name="d2"> Estiba ordenada</label>
+<label><input type="checkbox" name="d3"> Sin contaminación cruzada</label>
+<label><input type="checkbox" name="d4"> Puertas cerradas al cargar</label>
+<label><input type="checkbox" name="d5"> Frío encendido durante carga</label>
+</div>
+</div>
+
+<div class="section">
+<h3>4. DURANTE EL TRANSPORTE</h3>
+<div class="grid">
+<label><input type="checkbox" name="e1"> Refrigeración encendida</label>
+<label><input type="checkbox" name="e2"> Temperatura 0 - 6 °C</label>
+<label><input type="checkbox" name="e3"> No abrir innecesariamente</label>
+<label><input type="checkbox" name="e4"> No hay objetos ajenos</label>
+<label><input type="checkbox" name="e5"> No se come dentro</label>
+</div>
+</div>
+
+<div class="section">
+<h3>5. DESCARGA EN TIENDA</h3>
+<div class="grid">
+<label><input type="checkbox" name="f1"> Temp. verificada en cabina</label>
+<label><input type="checkbox" name="f2"> Productos íntegros</label>
+<label><input type="checkbox" name="f3"> Descarga rápida</label>
+<label><input type="checkbox" name="f4"> Uso correcto de jabas</label>
+<label><input type="checkbox" name="f5"> Zona limpia</label>
+<label><input type="checkbox" name="f6"> Retorno ordenado</label>
+</div>
+</div>
+
+<div class="section">
+<h3>6. HIGIENE Y PRESENTACIÓN DEL CHOFER</h3>
+<div class="grid">
+<label><input type="checkbox" name="g1"> Uniforme limpio</label>
+<label><input type="checkbox" name="g2"> Manos limpias</label>
+<label><input type="checkbox" name="g3"> Uso de EPP</label>
+<label><input type="checkbox" name="g4"> Sin joyas / objetos</label>
+<label><input type="checkbox" name="g5"> Sin heridas expuestas</label>
+</div>
+</div>
+
+<div class="section">
+<h3>7. ACCIONES ANTE DESVIACIONES</h3>
+<div class="grid">
+<label><input type="checkbox" name="h1"> Reporto desviación de temperatura</label>
+<label><input type="checkbox" name="h2"> Reporto incumplimientos</label>
+<label><input type="checkbox" name="h3"> Detuve carga si hubo riesgo</label>
+<label><input type="checkbox" name="h4"> Informé a logística/calidad</label>
+</div>
+<label>Observaciones / incidencias:</label>
+<textarea name="obs"></textarea>
+</div>
+
+<div class="section">
+<h3>8. CIERRE DE JORNADA</h3>
+<div class="grid">
+<label><input type="checkbox" name="i1"> Unidad descargada</label>
+<label><input type="checkbox" name="i2"> Limpieza realizada</label>
+<label><input type="checkbox" name="i3"> Registros completos</label>
+<label><input type="checkbox" name="i4"> Unidad lista</label>
+</div>
+<label>Firma del chofer: <input name="firma_final"></label>
+</div>
+
+<!-- ================= HOJA 2 ================= -->
+
+<h1 style="margin-top:40px;">CHECK LIST VEHÍCULOS</h1>
+
+<div class="section">
+<label>Kilometraje inicial: <input name="km_ini"></label>
+<label>Kilometraje final: <input name="km_fin"></label>
+<label>Marca del vehículo: <input name="marca"></label>
+</div>
+
+<div class="section">
+<h3>1. SISTEMA DE LUCES</h3>
+<div class="grid">
+<label><input type="checkbox" name="l1"> Luz baja</label>
+<label><input type="checkbox" name="l2"> Luz alta</label>
+<label><input type="checkbox" name="l3"> Luces de emergencia</label>
+<label><input type="checkbox" name="l4"> Luces neblineros</label>
+<label><input type="checkbox" name="l5"> Luz direccional</label>
+<label><input type="checkbox" name="l6"> Luz de freno posterior</label>
+<label><input type="checkbox" name="l7"> Luces de faros piratas</label>
+</div>
+</div>
+
+<div class="section">
+<h3>2. PARTE EXTERNA</h3>
+<div class="grid">
+<label><input type="checkbox" name="p1"> Parabrisas delantera</label>
+<label><input type="checkbox" name="p2"> Parabrisas posterior</label>
+<label><input type="checkbox" name="p3"> Limpia parabrisas</label>
+<label><input type="checkbox" name="p4"> Vidrio de parabrisas</label>
+<label><input type="checkbox" name="p5"> Espejo retrovisor</label>
+<label><input type="checkbox" name="p6"> Espejos laterales</label>
+</div>
+</div>
+
+<div class="section">
+<h3>3. PARTE INTERNA</h3>
+<div class="grid">
+<label><input type="checkbox" name="vi1"> Estado de tablero / indicadores operativos</label>
+<label><input type="checkbox" name="vi2"> Freno de mano</label>
+<label><input type="checkbox" name="vi3"> Freno de servicio</label>
+<label><input type="checkbox" name="vi4"> Aceite y refrigerante</label>
+<label><input type="checkbox" name="vi5"> Espejo retrovisor antideslumbrante</label>
+<label><input type="checkbox" name="vi6"> Linterna de mano</label>
+<label><input type="checkbox" name="vi7"> Limpieza cabina</label>
+<label><input type="checkbox" name="vi8"> Limpieza furgón</label>
+</div>
+</div>
+
+<div class="section">
+<h3>4. ESTADO DE LLANTAS</h3>
+<div class="grid">
+<label><input type="checkbox" name="ll1"> Llanta delantera derecha</label>
+<label><input type="checkbox" name="ll2"> Llanta delantera izquierda</label>
+<label><input type="checkbox" name="ll3"> Llanta posterior derecha</label>
+<label><input type="checkbox" name="ll4"> Llanta posterior izquierda</label>
+<label><input type="checkbox" name="ll5"> Llantas de repuesto</label>
+</div>
+</div>
+
+<div class="section">
+<h3>5. ACCESORIOS DE SEGURIDAD</h3>
+<div class="grid">
+<label><input type="checkbox" name="s1"> Conos de seguridad</label>
+<label><input type="checkbox" name="s2"> Extintor</label>
+<label><input type="checkbox" name="s3"> Alarma de retrocesos</label>
+<label><input type="checkbox" name="s4"> Cinturones de seguridad</label>
+<label><input type="checkbox" name="s5"> Linterna de mano</label>
+<label><input type="checkbox" name="s6"> Botiquín</label>
+</div>
+</div>
+
+<div class="section">
+<h3>6. TAPAS Y OTROS</h3>
+<div class="grid">
+<label><input type="checkbox" name="t1"> Tapa de tanque de gasolina y/o petróleo</label>
+<label><input type="checkbox" name="t2"> Gata hidráulica</label>
+<label><input type="checkbox" name="t3"> Herramientas y palanca de ruedas</label>
+<label><input type="checkbox" name="t4"> Cable, cadena y/o estrobo</label>
+<label><input type="checkbox" name="t5"> Funcionamiento termoking</label>
+<label><input type="checkbox" name="t6"> Cámara externa</label>
+<label><input type="checkbox" name="t7"> Termoking</label>
+<label><input type="checkbox" name="t8"> Cámara de retroceso</label>
+</div>
+</div>
+
+<div class="section">
+<h3>OBSERVACIONES DEL VEHÍCULO</h3>
+<textarea name="obs_vehiculo"></textarea>
+</div>
+
+<!-- 🔴 BOTÓN FINAL (AHORA SÍ APARECE) -->
+<button type="submit">Enviar checklist</button>
+<p id="msg"></p>
+
+</form>
+<!-- 🔴 EL FORM TERMINA AQUÍ -->
+
+</div>
+
+<script>
+const form = document.getElementById("formChecklist");
+const msg  = document.getElementById("msg");
+
+const API_URL = "https://script.google.com/macros/s/AKfycby48p1PDiRSff9_CZKB9tmc0lDF8DmbQ6trnn9awxnGRRyR_LQSehff9k-tugfO4mw/exec";
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  msg.innerText = "Enviando checklist...";
+
+  const html = document.querySelector(".container").innerHTML;
+
+  try{
+    await fetch(API_URL,{
+      method:"POST",
+      body:JSON.stringify({ html }),
+      headers:{ "Content-Type":"application/json" }
+    });
+
+    msg.innerText = "Checklist enviado con PDF ✔️";
+    form.reset();
+  }catch(err){
+    msg.innerText = "Error al enviar checklist";
+    console.error(err);
+  }
+});
+</script>
+
+</body>
+</html>
